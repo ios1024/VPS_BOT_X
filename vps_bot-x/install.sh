@@ -1,6 +1,6 @@
 #!/bin/bash
 # -*- coding: utf-8 -*-
-# install.sh (V6.5.0 实验室优化版 - 适配 vps_bot-x)
+# install.sh (V6.5.0 实验室优化版 - 适配 vps_bot-x) 作者:thex
 
 # 定义颜色
 GREEN='\033[0;32m'
@@ -119,29 +119,9 @@ systemctl restart vpsbot
 
 echo -e "${GREEN}>>> [6/6] 安装快捷指令 'kk'...${NC}"
 
-cat > /usr/bin/kk <<EOFKK
-#!/bin/bash
-# 控制台快捷脚本
-while true; do
-    clear
-    echo -e "\033[0;36m==============================\033[0m"
-    echo -e "    VPS 遥控器-X 控制台       "
-    echo -e "\033[0;36m==============================\033[0m"
-    echo -e "  [1] 启动  [2] 重启  [3] 停止"
-    echo -e "  [4] 日志  [5] 配置  [0] 退出"
-    read -p "请选择: " choice
-    case \$choice in
-        1) systemctl start vpsbot ;;
-        2) systemctl restart vpsbot ;;
-        3) systemctl stop vpsbot ;;
-        4) journalctl -u vpsbot -f -n 50 ;;
-        5) nano /opt/vps_bot-x/sentinel_config.json ;;
-        0) exit 0 ;;
-    esac
-    read -p "按回车继续..."
-done
-EOFKK
-
+# 安装完整的 kk 控制台脚本
+echo -e "${GREEN}>>> 安装控制台管理脚本...${NC}"
+cp "$TARGET_DIR/kk.sh" /usr/bin/kk
 chmod +x /usr/bin/kk
 
 echo -e "${GREEN}🎉 安装完成！请在 TG 发送 /start 开始使用。${NC}"

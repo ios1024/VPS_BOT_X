@@ -212,7 +212,7 @@ async def setadminid_command(u: Update, c: ContextTypes.DEFAULT_TYPE):
         await u.message.reply_text(
             f"👤 <b>当前管理员ID</b>: <code>{current_admin_id}</code>\n\n"
             f"📝 <b>用法</b>: <code>/setadminid 新管理员ID</code>\n"
-            f"💡 <b>格式</b>: 纯数字 (例如: 123456789)\n"
+            f"💡 <b>格式</b>: 纯数字 (例如: 12345678)\n"
             f"💡 <b>如何获取</b>: 在 Telegram 中发送 /id 给 @userinfobot\n\n"
             f"⚠️ <b>注意</b>: 修改后需要重启机器人才能生效",
             parse_mode="HTML"
@@ -225,7 +225,7 @@ async def setadminid_command(u: Update, c: ContextTypes.DEFAULT_TYPE):
         await u.message.reply_text(
             "❌ <b>格式错误</b>\n\n"
             "管理员ID应为纯数字，例如:\n"
-            "<code>123456789</code>",
+            "<code>12345678</code>",
             parse_mode="HTML"
         )
         return

@@ -162,7 +162,7 @@ def get_prompt_text(action):
             "👤 <b>修改管理员ID</b>\n\n"
             "请输入新的管理员 Telegram User ID:\n\n"
             "💡 <b>如何获取</b>: 在 Telegram 中发送 /id 给 @userinfobot\n"
-            "📝 <b>格式</b>: 纯数字 (例如: 123456789)\n\n"
+            "📝 <b>格式</b>: 纯数字 (例如: 12345678)\n\n"
             "⚠️ <b>注意</b>: 修改后需要重启机器人才能生效"
         ),
         

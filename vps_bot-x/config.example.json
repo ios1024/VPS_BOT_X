@@ -1,6 +1,6 @@
 {
   "bot_token": "YOUR_BOT_TOKEN_HERE",
-  "admin_id": 123456789,
+  "admin_id": 12345678,
   "server_remark": "My VPS Server",
   "ban_threshold": 5,
   "cpu_limit": 90,
